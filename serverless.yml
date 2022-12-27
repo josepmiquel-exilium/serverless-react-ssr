@@ -1,0 +1,23 @@
+service: serverless-react-express-ssr
+
+frameworkVersion: '3'
+
+provider:
+    name: aws
+    runtime: nodejs16.x
+    region: <<region>>
+
+plugins:
+    - 'serverless-apigw-binary'
+
+custom:
+    apigwBinary:
+        types:
+            - '*/*'
+
+functions:
+    app:
+        handler: handler.express
+        events:
+            - http: ANY /
+            - http: ANY /{proxy+}
