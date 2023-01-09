@@ -34,10 +34,10 @@ app.get('*', (req, res, next) => {
             // Add this custom values in your index.html before build the application
             // to inject succesfully
             htmlData = htmlData
-                .replace('React App', meta.title)
-                .replace('My description', meta.og_description)
-                .replace('My image', meta.og_image)
-                .replace('My Url', meta.og_url);
+                .replaceAll('React App', meta.title)
+                .replaceAll('My description', meta.og_description)
+                .replaceAll('My image', meta.og_image)
+                .replaceAll('My Url', meta.og_url);
         }
 
         // console.log(htmlData);
