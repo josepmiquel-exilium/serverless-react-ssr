@@ -1,4 +1,4 @@
-# React App Server-Side Rendering with with Express and Serverless (or not).
+# React App Server-Side Rendering with Express and Serverless (or not).
 
 This solution results from the need to inject dynamic meta tags fetched from an API before the browser renders the application. In this way, we allow robots to read our tags and we resolve the SEO problem of a Single Page Application and enjoy the benefits of a Server Side Rendering Application.
 
